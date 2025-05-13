@@ -9,7 +9,6 @@ with DAG(
     schedule="0 0 * * *",
     start_date=pendulum.datetime(2021,1,1,tz="Asia/Seoul"), #tz=timezone, 세계표준 UTC (한국보다 9시간 느림)
     catchup=False,
-    tags=["example"]
 ) as dag:
     bash_t1 = BashOperator( #task 객체명
         task_id="bash_t1",
@@ -23,4 +22,3 @@ with DAG(
 
     bash_t1 >> bash_t2
 
-    
