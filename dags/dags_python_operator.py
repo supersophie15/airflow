@@ -16,9 +16,10 @@ with DAG(
         fruit = ['APPLE','ORANGE','AVOCADO'] #정의 내용은 같은 들여쓰기에 작성
         rand_int = random.randint(0,3)
         print(fruit[rand_int])
+        
     py_t1 = PythonOperator(
-        task_id='py_t1'
-        python_callable=select_fruit
+        task_id='py_t1',
+        python_callable=select_fruit #정의된 함수를 불러옴옴      
     )
 
     py_t1
