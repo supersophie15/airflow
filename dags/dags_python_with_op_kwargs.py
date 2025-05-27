@@ -29,7 +29,7 @@ with DAG(
 
     #외부함수 불러오기
     regist2_t1 = pythonOperator(
-        task_Id = 'regist2_t1'
+        task_Id = 'regist2_t1',
         python_callable=regist2,
         op_args =['sjpark','woman','kr','seoul'],
         op_kwargs = {'email':'sujeong.bak@gmail.com','phone':'01023456789'}        
