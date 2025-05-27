@@ -10,8 +10,8 @@ def regist2(name, sex, *args, **kwargs):
     print(f'이름: {name}')
     print(f'성별: {sex}')
     print(f'기타옵션들: {args}')
-    email = kwargs['email'] or None
-    phone = kwargs['phone'] or None
+    email = kwargs['email'] or None #에러방지
+    phone = kwargs['phone'] or None #에러방지지
     if email:
         print(email)
     if phone:
