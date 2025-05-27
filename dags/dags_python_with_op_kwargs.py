@@ -1,7 +1,7 @@
 from airflow import DAG
 import pendulum
 import datetime
-from airflow.operators.python import pythonOperator
+from airflow.operators.python import PythonOperator
 from common.common_func import regist2
 
 
@@ -28,7 +28,7 @@ with DAG(
 
 
     #외부함수 불러오기
-    regist2_t1 = pythonOperator(
+    regist2_t1 = PythonOperator(
         task_Id = 'regist2_t1',
         python_callable=regist2,
         op_args =['sjpark','woman','kr','seoul'],
